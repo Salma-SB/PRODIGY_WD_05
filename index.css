@@ -55,6 +55,13 @@ h2, label, p {
     }
 }
 
+@media (max-width:400px) {
+    #weather-container {
+        max-width: 200px;
+        max-height: 150px;
+    }
+}
+
 
 input {
     z-index: 5;
