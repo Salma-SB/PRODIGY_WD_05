@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.back{
+    position: relative;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+     width: 100vw;
+     animation: color 5s ease-in-out infinite;
+     align-items: center;
+     justify-content: center;
+     background-size: 200% 200%; /* Ajoutez ceci pour permettre le dégradé à se déplacer */
+
+}
+#backg{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+#weather-container {
+    position: fixed;
+    z-index: 3;
+     max-width: 600px;
+    max-height: 450px;
+    padding: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+}
+
+h2, label, p {
+    z-index: 4;
+    color: #fbfcff;
+    margin: 8px 0;
+}
+@media (max-width:700px) {
+    #weather-container {
+        max-width: 350px;
+    }
+}
+
+
+input {
+    z-index: 5;
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+button {
+    background: #ffffff;
+    color: rgb(122, 122, 122);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+    margin-top: 35px;
+    z-index: 22;
+}
+
+button:hover {
+    background: linear-gradient(to right, #dbdeee, #f091f8);
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+}
+
+#temp-div p {
+    font-size: 40px;
+    margin-top: -30px;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#weather-icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    margin-top: -28px;
+    display: none;
+}
+#hourly-forecast::-webkit-scrollbar {
+    width: 10px;
+  }
+  #hourly-forecast::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+
+  }
+  #hourly-forecast::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #e0238b 0%, #e6e8f0 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+   
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+    
+}
