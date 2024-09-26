@@ -51,14 +51,13 @@ h2, label, p {
 }
 @media (max-width:700px) {
     #weather-container {
-        max-width: 350px;
+        max-width: 300px;
     }
 }
 
 @media (max-width:300px) {
     #weather-container {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 200px;
     }
 }
 
